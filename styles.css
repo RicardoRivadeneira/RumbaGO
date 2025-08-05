@@ -1,0 +1,172 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a1a;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Encabezado */
+header {
+    padding: 40px 20px;
+}
+header h1 {
+    font-size: 3rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 30px #00ffff;
+}
+header p {
+    font-size: 1.2rem;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Navegación */
+nav {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav a {
+    color: #00ffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #ff00ff;
+}
+
+/* Botón neón */
+.btn-neon {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 0 10px #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+    transition: 0.3s;
+}
+.btn-neon:hover {
+    color: #ff00ff;
+    border-color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+/* Secciones */
+.section-dark {
+    background-color: #0a0a1a;
+    padding: 50px 20px;
+}
+.section-light {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 50px 20px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+footer p {
+    margin: 5px 0;
+}
+.icon {
+    width: 30px;
+    margin: 0 8px;
+    transition: transform 0.3s ease;
+}
+.icon:hover {
+    transform: scale(1.2);
+}
+
+/* Galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+}
+
+/* Hero (encabezado con imagen de fondo) */
+.hero {
+    background: url('img/fondo-fiesta.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    color: #00ffff;
+    text-shadow: 0 0 15px #00ffff, 0 0 35px #00ffff;
+}
+.hero p {
+    font-size: 1.3rem;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+.logo {
+    width: 140px;
+    margin-bottom: 20px;
+}
+
+/* Intro */
+.intro {
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Botón neón */
+.btn-neon {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 0 10px #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+    transition: 0.3s;
+}
+.btn-neon:hover {
+    color: #ff00ff;
+    border-color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    box-shadow: 0 0 15px #ff00ff;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Rumba Go</title>
+    <link rel="stylesheet" href="contacto.css">
+
+    <!-- Leaflet CSS para el mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-text">Rumba Go</a>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="mision.html">Misión y Visión</a>
+                <a href="ofrecemos.html">Lo que Ofrecemos</a>
+                <a href="app.html">La Aplicación</a>
+                <a href="contacto.html" class="active">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="contact-header">
+        <h1>📩 Contáctanos</h1>
+        <p>¿Tienes dudas, sugerencias o quieres registrar tu local? Escríbenos y nos pondremos en contacto contigo.</p>
+    </header>
+
+    <!-- Contenedor principal -->
+    <section class="contact-container">
+        
+        <!-- Formulario -->
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea placeholder="Tu mensaje" required></textarea>
+                <button type="submit" class="btn-neon">✨ Enviar ✨</button>
+            </form>
+        </div>
+
+        <!-- Mapa -->
+        <div class="map-container">
+            <h2>📍 Nuestra Ubicación</h2>
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Síguenos en redes sociales:</p>
+        <a href="https://www.facebook.com/share/1BtuTzYcuk/" target="_blank"><img src="img/facebook.png" alt="Facebook" class="icon"></a>
+        <a href="https://www.instagram.com/rumbagoapp?igsh=MWZmcnRuNmdtOGVuMQ==" target="_blank"><img src="img/instagram.png" alt="Instagram" class="icon"></a>
+        <a href="https://www.tiktok.com/@rumba.go.app" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp" class="icon"></a>
+        <p>&copy; 2025 Rumba Go | Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Leaflet JS para el mapa -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Crear el mapa en la ubicación de la ESPE
+        var map = L.map('map').setView([-0.3147, -78.435], 16);
+
+        // Capa de mapa de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Marcador en ESPE
+        L.marker([-0.3147, -78.435]).addTo(map)
+            .bindPopup("<b>Universidad de las Fuerzas Armadas ESPE</b><br>Quito, Ecuador")
+            .openPopup();
+    </script>
+</body>
+</html>
